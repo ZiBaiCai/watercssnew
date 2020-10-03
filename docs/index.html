@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Watercssnew</title>
-    
+    <link rel="canonical" href="https://zibaicai.com/watercssnew" />
     <meta
       name="description"
       content="A drop-in collection of CSS styles to make simple websites like this just a little bit nicer."
@@ -53,7 +53,7 @@
         "@type": "WebSite",
         "name": "Water.css",
         "alternateName": "Water.css",
-        "url": "https://watercss.kognise.dev/"
+        "url": "https://zibaicai.com/watercssnew"
       }
     </script>
 
@@ -114,20 +114,27 @@
         <h3 id="link-snippet-headline">
           Paste this into the <code>&lt;head&gt;</code> of your HTML:
         </h3>
-        
+        <button type="button" id="copy-button">
+          <span id="copy-button-feedback"></span>
+          Copy to clipboard
+        </button>
       </header>
 
-      
+      <div id="link-snippet-container">
+        <pre id="link-snippet-auto"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"></code></pre>
+        <pre hidden id="link-snippet-dark"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"></code></pre>
+        <pre hidden id="link-snippet-light"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"></code></pre>
+      </div>
 
       <h3>Options</h3>
       <form id="theme-form">
-        <input type="radio" value="auto" checked name="theme" />
+        <input type="radio" value="auto" checked name="theme" id="theme-auto" />
         <label for="theme-auto">Automatic 🌙 / ☀</label>
 
-        <input type="radio" value="dark" name="theme" />
+        <input type="radio" value="dark" name="theme" id="theme-dark" />
         <label for="theme-dark">Dark theme 🌙</label>
 
-        <input type="radio" value="light" name="theme" />
+        <input type="radio" value="light" name="theme" id="theme-light" />
         <label for="theme-light">Light theme ☀</label>
       </form>
 
